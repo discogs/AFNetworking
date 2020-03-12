@@ -21,10 +21,10 @@
 
 #import <XCTest/XCTest.h>
 #import "AFTestCase.h"
-#import "UIWebView+AFNetworking.h"
+#import "WKWebView+AFNetworking.h"
 
 @interface AFUIWebViewTests : AFTestCase
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSURLRequest *HTMLRequest;
 
 @end
@@ -33,7 +33,7 @@
 
 - (void)setUp {
     [super setUp];
-    self.webView = [UIWebView new];
+    self.webView = [WKWebView new];
     self.HTMLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://httpbin.org/html"]];
 }
 
